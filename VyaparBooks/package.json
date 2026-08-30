@@ -1,0 +1,31 @@
+{
+  "name": "vyaparbooks",
+  "productName": "VyaparBooks",
+  "version": "1.0.0",
+  "description": "VyaparBooks - Free, offline-first double-entry accounting & finance software for Indian MSMEs, vendors and contractors.",
+  "author": "VyaparBooks Contributors",
+  "license": "MIT",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "test": "node scripts/quick-check.js",
+    "migrate": "node -e \"require('./src/database/db.js').migrate().then(x=>{console.log('migration ok');process.exit(0)}).catch(e=>{console.error(e);process.exit(1)})\"",
+    "dist": "electron-builder --win nsis --x64",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux AppImage",
+    "dist:all": "electron-builder --win nsis --mac --linux AppImage"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "chart.js": "^4.4.7",
+    "electron-store": "^8.2.0",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}

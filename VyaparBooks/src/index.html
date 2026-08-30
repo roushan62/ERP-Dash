@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: file:; script-src 'self' 'unsafe-inline' 'unsafe-eval' file:; style-src 'self' 'unsafe-inline'; img-src 'self' data: file:; font-src 'self' data:;" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VyaparBooks - Free Accounting &amp; Finance Software</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231E40AF'/%3E%3Ctext x='50' y='70' font-size='54' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3E₹%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/typography.css" />
+  <link rel="stylesheet" href="styles/forms.css" />
+  <link rel="stylesheet" href="styles/tables.css" />
+  <link rel="stylesheet" href="styles/print.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="components/components.css" />
+</head>
+<body>
+  <div id="app-root">
+    <div class="app-shell">
+      <aside id="app-sidebar" class="sidebar"></aside>
+      <div class="app-main">
+        <header id="app-header" class="app-header"></header>
+        <main id="app-content" class="content"><div class="content-inner"><div class="loader show"></div></div></main>
+      </div>
+    </div>
+  </div>
+
+  <script src="../node_modules/chart.js/dist/chart.umd.js"></script>
+  <script src="utils/currency-formatter.js"></script>
+  <script src="utils/date-formatter.js"></script>
+  <script src="utils/financial-year.js"></script>
+  <script src="utils/gst-calculator.js"></script>
+  <script src="utils/number-to-words.js"></script>
+  <script src="components/sidebar.js"></script>
+  <script src="components/header.js"></script>
+  <script src="components/modal.js"></script>
+  <script src="components/toast-notification.js"></script>
+  <script src="components/table.js"></script>
+  <script src="components/form-validator.js"></script>
+  <script src="export/print-handler.js"></script>
+  <script src="renderer/app.js"></script>
+  <script src="renderer/voucher-form.js"></script>
+  <script src="renderer/report-form.js"></script>
+
+  <!-- Route implementations -->
+  <script src="modules/company-setup/company-setup.js"></script>
+  <script src="modules/dashboard/dashboard.js"></script>
+  <script src="modules/masters/chart-of-accounts.js"></script>
+  <script src="modules/masters/ledger-master.js"></script>
+  <script src="modules/masters/party-master.js"></script>
+  <script src="modules/masters/item-master.js"></script>
+  <script src="modules/masters/bank-master.js"></script>
+  <script src="modules/masters/tax-master.js"></script>
+  <script src="modules/vouchers/sales-invoice.js"></script>
+  <script src="modules/vouchers/purchase-invoice.js"></script>
+  <script src="modules/vouchers/payment-voucher.js"></script>
+  <script src="modules/vouchers/receipt-voucher.js"></script>
+  <script src="modules/vouchers/journal-voucher.js"></script>
+  <script src="modules/vouchers/contra-voucher.js"></script>
+  <script src="modules/vouchers/credit-note.js"></script>
+  <script src="modules/vouchers/debit-note.js"></script>
+  <script src="modules/vouchers/expense-voucher.js"></script>
+  <script src="modules/banking/bank-reconciliation.js"></script>
+  <script src="modules/banking/bank-statement.js"></script>
+  <script src="modules/gst/gst-dashboard.js"></script>
+  <script src="modules/gst/gstr1-report.js"></script>
+  <script src="modules/gst/gstr3b-report.js"></script>
+  <script src="modules/gst/gst-ledger.js"></script>
+  <script src="modules/reports/trial-balance.js"></script>
+  <script src="modules/reports/profit-loss.js"></script>
+  <script src="modules/reports/balance-sheet.js"></script>
+  <script src="modules/reports/cash-flow.js"></script>
+  <script src="modules/reports/day-book.js"></script>
+  <script src="modules/reports/ledger-report.js"></script>
+  <script src="modules/reports/outstanding-receivable.js"></script>
+  <script src="modules/reports/outstanding-payable.js"></script>
+  <script src="modules/reports/sales-register.js"></script>
+  <script src="modules/reports/purchase-register.js"></script>
+  <script src="modules/reports/stock-summary.js"></script>
+  <script src="modules/reports/aging-report.js"></script>
+  <script src="modules/reports/expense-report.js"></script>
+  <script src="modules/settings/general-settings.js"></script>
+  <script src="modules/settings/invoice-settings.js"></script>
+  <script src="modules/settings/backup-restore.js"></script>
+</body>
+</html>

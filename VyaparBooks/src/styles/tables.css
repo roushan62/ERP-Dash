@@ -1,0 +1,45 @@
+/* VyaparBooks - Table styles */
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.table thead th {
+  background: #F1F5F9;
+  color: var(--text);
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  white-space: nowrap;
+}
+table.table tbody td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+table.table tbody tr:nth-child(even) { background: #FBFCFE; }
+table.table tbody tr:hover { background: #EFF6FF; }
+table.table .num { text-align: right; font-variant-numeric: tabular-nums; }
+table.table .actions { text-align: right; white-space: nowrap; }
+
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  flex-wrap: wrap;
+}
+.pagination { display: flex; gap: 6px; align-items: center; }
+
+.total-row td { font-weight: 600; background: #F8FAFC !important; border-top: 2px solid var(--border) !important; }
+
+.tree-node { cursor: pointer; }
+.tree-children { margin-left: 22px; border-left: 1px dashed var(--border); padding-left: 6px; }
+.tree-toggle { width: 18px; display: inline-block; text-align: center; color: var(--text-secondary); }
