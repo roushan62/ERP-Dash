@@ -1,0 +1,64 @@
+appId: in.vyaparbooks.app
+productName: VyaparBooks
+copyright: Copyright © 2026 VyaparBooks Contributors (MIT)
+
+directories:
+  output: dist
+  buildResources: build
+
+files:
+  - "src/**/*"
+  - "package.json"
+  - "node_modules/**/*"
+  - "!**/*.map"
+  - "!**/*.md"
+  - "!build/**"
+
+asar: true
+asarUnpack:
+  - "**/node_modules/better-sqlite3/**"
+
+compression: maximum
+npmRebuild: true
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+
+nsis:
+  oneClick: true
+  perMachine: false
+  allowElevation: false
+  allowToChangeInstallationDirectory: false
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: VyaparBooks
+  deleteAppDataOnUninstall: false
+  artifactName: "VyaparBooks-Setup-${version}.${ext}"
+  installerLanguages:
+    - en_US
+
+mac:
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+  category: public.app-category.finance
+  icon: build/icon_mac.png
+  hardenedRuntime: true
+  gatekeeperAssess: false
+
+linux:
+  target:
+    - AppImage
+  category: Office
+  icon: build/icon.png
+  maintainer: VyaparBooks
+
+publish:
+  provider: github
+  releaseType: release

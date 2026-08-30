@@ -1,0 +1,13 @@
+/* VyaparBooks - Typography */
+body { line-height: 1.5; }
+.text-small { font-size: 12px; }
+.text-body { font-size: 14px; }
+.text-subtitle { font-size: 16px; }
+.text-title { font-size: 20px; }
+.text-heading { font-size: 24px; }
+.text-page { font-size: 32px; }
+.medium { font-weight: 500; }
+.semibold { font-weight: 600; }
+.bold { font-weight: 700; }
+.italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }

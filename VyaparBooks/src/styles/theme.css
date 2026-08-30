@@ -1,0 +1,5 @@
+/* VyaparBooks - Light theme (default) */
+:root {
+  color-scheme: light;
+}
+/* Dark theme is intentionally not shipped in v1. Kept as extension point. */
